@@ -47,7 +47,7 @@ public class PostController {
 
     @PutMapping
     public Post update(@RequestBody Post newPost) {
-        // проверяем необходимые условия
+        //проверяем необходимые условия
         if (newPost.getId() == null) {
             throw new ConditionsNotMetException("Id должен быть указан");
         }
@@ -56,7 +56,7 @@ public class PostController {
             if (newPost.getDescription() == null || newPost.getDescription().isBlank()) {
                 throw new ConditionsNotMetException("Описание не может быть пустым");
             }
-            // если публикация найдена и все условия соблюдены, обновляем её содержимое
+            //если публикация найдена и все условия соблюдены, обновляем её содержимое
             oldPost.setDescription(newPost.getDescription());
             return oldPost;
         }

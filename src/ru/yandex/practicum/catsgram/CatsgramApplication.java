@@ -8,8 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Map;
 import java.util.Scanner;
 
-import  java.io.*;
-
 @SpringBootApplication
 public class CatsgramApplication {
     public static void main(String[] args) {

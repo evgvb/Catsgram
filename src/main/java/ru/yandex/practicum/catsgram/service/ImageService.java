@@ -9,20 +9,18 @@ import ru.yandex.practicum.catsgram.exception.ConditionsNotMetException;
 import ru.yandex.practicum.catsgram.exception.ImageFileException;
 import ru.yandex.practicum.catsgram.exception.NotFoundException;
 import ru.yandex.practicum.catsgram.model.Image;
-import ru.yandex.practicum.catsgram.model.Post;
 import ru.yandex.practicum.catsgram.model.ImageData;
+import ru.yandex.practicum.catsgram.model.Post;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
-import java.io.File;
-import java.nio.file.Paths;
 
 @Service
 @RequiredArgsConstructor
@@ -144,6 +142,4 @@ public class ImageService {
                     + ", name: " + image.getOriginalFileName());
         }
     }
-
-
 }

@@ -1,6 +1,6 @@
 package ru.yandex.practicum.catsgram.exception;
 
-public class ParameterNotValidException extends IllegalArgumentException{
+public class ParameterNotValidException extends IllegalArgumentException {
 
     private final String parameter;
     private final String reason;

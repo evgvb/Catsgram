@@ -29,11 +29,11 @@ public class PostService {
     public Optional<Post> findPostById(Long id) {
         return Optional.ofNullable(posts.get(id));
     }
-    
+
     public Post create(Post post) {
         if (post.getDescription() == null || post.getDescription().isBlank()) {
-        throw new ConditionsNotMetException("Описание не может быть пустым");
-    }
+            throw new ConditionsNotMetException("Описание не может быть пустым");
+        }
         userService.findUserById(post.getAuthorId())
                 .orElseThrow(() -> new ConditionsNotMetException("Автор с id = "
                         + post.getAuthorId() + " не найден"));

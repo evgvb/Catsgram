@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16.1
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: catsgram
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: 12345  # Рекомендуется заменить на свой пароль
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
